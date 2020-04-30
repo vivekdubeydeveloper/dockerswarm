@@ -20,7 +20,7 @@ public class EmployeeController {
 	@GetMapping("/employees/sal")
 	public List<Employee> getEmployessSalary(){
 		RestTemplate rt=new RestTemplate();
-		return (List<Employee>)rt.getForEntity("http://localhost:9090/salary", List.class).getBody();
+		return (List<Employee>)rt.getForEntity("http://salary:9090/salary", List.class).getBody();
 	}
 
 }
